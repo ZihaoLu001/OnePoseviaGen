@@ -1,31 +1,31 @@
 import os, sys
 import torch
 import torch.amp
-from models.SpaTrackV2.models.tracker3D.co_tracker.cotracker_base import CoTrackerThreeOffline, get_1d_sincos_pos_embed_from_grid
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.co_tracker.cotracker_base import CoTrackerThreeOffline, get_1d_sincos_pos_embed_from_grid
 import torch.nn.functional as F
-from models.SpaTrackV2.utils.visualizer import Visualizer
-from models.SpaTrackV2.utils.model_utils import sample_features5d
-from models.SpaTrackV2.models.blocks import bilinear_sampler
+from SpaTrackerV2.models.SpaTrackV2.utils.visualizer import Visualizer
+from SpaTrackerV2.models.SpaTrackV2.utils.model_utils import sample_features5d
+from SpaTrackerV2.models.SpaTrackV2.models.blocks import bilinear_sampler
 import torch.nn as nn
-from models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
     EfficientUpdateFormer, AttnBlock, Attention, CrossAttnBlock,
     sequence_BCE_loss, sequence_loss, sequence_prob_loss, sequence_dyn_prob_loss, sequence_loss_xyz, balanced_binary_cross_entropy
 )
 from torchvision.io import write_video
 import math
-from models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
     Mlp, BasicEncoder, EfficientUpdateFormer, GeometryEncoder, NeighborTransformer, CorrPointformer
 )
-from models.SpaTrackV2.utils.embeddings import get_3d_sincos_pos_embed_from_grid
+from SpaTrackerV2.models.SpaTrackV2.utils.embeddings import get_3d_sincos_pos_embed_from_grid
 from einops import rearrange, repeat
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.utils import (
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.utils import (
     EfficientUpdateFormer3D, weighted_procrustes_torch, posenc, key_fr_wprocrustes, get_topo_mask,
     TrackFusion, get_nth_visible_time_index
 )
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.ba import extract_static_from_3DTracks, ba_pycolmap
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.pointmap_updator import PointMapUpdator
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.alignment import affine_invariant_global_loss
-from models.SpaTrackV2.models.tracker3D.delta_utils.upsample_transformer import UpsampleTransformerAlibi
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.ba import extract_static_from_3DTracks, ba_pycolmap
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.pointmap_updator import PointMapUpdator
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.alignment import affine_invariant_global_loss
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.delta_utils.upsample_transformer import UpsampleTransformerAlibi
 
 class TrackRefiner3D(CoTrackerThreeOffline):
 

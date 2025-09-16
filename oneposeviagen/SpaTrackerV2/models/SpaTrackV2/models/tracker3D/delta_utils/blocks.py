@@ -13,7 +13,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from models.SpaTrackV2.models.blocks import bilinear_sampler
+from SpaTrackerV2.models.SpaTrackV2.models.blocks import bilinear_sampler
 from einops import rearrange
 from torch import Tensor, einsum
 

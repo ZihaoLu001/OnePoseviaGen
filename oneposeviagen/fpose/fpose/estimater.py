@@ -7,11 +7,11 @@
 # license agreement from NVIDIA CORPORATION is strictly prohibited.
 
 
-from fpose.Utils import *
-from fpose.datareader import *
+from fpose.fpose.Utils import *
+from fpose.fpose.datareader import *
 import itertools
-from fpose.learning.training.predict_score import *
-from fpose.learning.training.predict_pose_refine import *
+from fpose.fpose.learning.training.predict_score import *
+from fpose.fpose.learning.training.predict_pose_refine import *
 import yaml
 
 

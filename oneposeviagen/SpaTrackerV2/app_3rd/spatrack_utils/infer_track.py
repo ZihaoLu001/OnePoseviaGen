@@ -1,4 +1,4 @@
-from models.SpaTrackV2.models.predictor import Predictor
+from SpaTrackerV2.models.SpaTrackV2.models.predictor import Predictor
 import yaml
 import easydict
 import os
@@ -9,9 +9,9 @@ import torchvision.transforms as T
 from PIL import Image
 import io
 import moviepy.editor as mp
-from models.SpaTrackV2.utils.visualizer import Visualizer
+from SpaTrackerV2.models.SpaTrackV2.utils.visualizer import Visualizer
 import tqdm
-from models.SpaTrackV2.models.utils import get_points_on_a_grid
+from SpaTrackerV2.models.SpaTrackV2.models.utils import get_points_on_a_grid
 import glob
 from rich import print
 import argparse

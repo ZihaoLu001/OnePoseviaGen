@@ -6,8 +6,8 @@ from typing import Callable, List
 import collections
 from torch import Tensor
 from itertools import repeat
-from models.SpaTrackV2.utils.model_utils import bilinear_sampler
-from models.SpaTrackV2.models.blocks import CrossAttnBlock as CrossAttnBlock_F
+from SpaTrackerV2.models.SpaTrackV2.utils.model_utils import bilinear_sampler
+from SpaTrackerV2.models.SpaTrackV2.models.blocks import CrossAttnBlock as CrossAttnBlock_F
 from torch.nn.functional import scaled_dot_product_attention
 from torch.nn.attention import sdpa_kernel, SDPBackend
 # import flash_attn

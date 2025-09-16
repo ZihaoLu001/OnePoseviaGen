@@ -14,23 +14,23 @@ import pytorch_lightning as pl
 import random
 import open3d as o3d
 import utils3d
-from trellis.modules.sparse.attention import SparseMultiHeadAttention
-from trellis.models.structured_latent_flow import SparseResBlock3d, SparseResBlock3dwoT
-import trellis.modules.sparse as sp
-from trellis.models.sparse_structure_vae import *
+from trellis.trellis.modules.sparse.attention import SparseMultiHeadAttention
+from trellis.trellis.models.structured_latent_flow import SparseResBlock3d, SparseResBlock3dwoT
+import trellis.trellis.modules.sparse as sp
+from trellis.trellis.models.sparse_structure_vae import *
 from ..modules.spatial import patchify, unpatchify
 from deepspeed.ops.adam import FusedAdam
-from trellis.modules.utils import convert_module_to_bf16, convert_module_to_f16, convert_module_to_f32
+from trellis.trellis.modules.utils import convert_module_to_bf16, convert_module_to_f16, convert_module_to_f32
 from contextlib import contextmanager
-import trellis.models as models
-from trellis.modules.transformer import ModulatedPosedTransformerBlock
+import trellis.trellis.models as models
+from trellis.trellis.modules.transformer import ModulatedPosedTransformerBlock
 
 import sys
 # sys.path.append("wheels/vggt")
 # from wheels.vggt.vggt.models.vggt import VGGT
 from typing import *
 from scipy.spatial.transform import Rotation
-from trellis.modules.transformer import ModulatedMultiViewCond
+from trellis.trellis.modules.transformer import ModulatedMultiViewCond
 
 def export_point_cloud(xyz, color):
     # Convert tensors to numpy arrays if needed

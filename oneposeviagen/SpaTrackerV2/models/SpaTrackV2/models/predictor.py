@@ -8,7 +8,7 @@ import torch
 import torch.nn.functional as F
 
 from tqdm import tqdm
-from models.SpaTrackV2.models.SpaTrack import SpaTrack2
+from SpaTrackerV2.models.SpaTrackV2.models.SpaTrack import SpaTrack2
 from typing import Literal
 import numpy as np
 from pathlib import Path

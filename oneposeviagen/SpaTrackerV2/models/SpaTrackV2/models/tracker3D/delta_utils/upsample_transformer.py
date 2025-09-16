@@ -8,7 +8,7 @@ from einops import einsum, rearrange, repeat
 from jaxtyping import Float, Int64
 from torch import Tensor, nn
 
-from models.SpaTrackV2.models.tracker3D.delta_utils.blocks import (
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.delta_utils.blocks import (
     Attention,
     AttnBlock,
     BasicEncoder,
@@ -20,7 +20,7 @@ from models.SpaTrackV2.models.tracker3D.delta_utils.blocks import (
     pix2cam,
 )
 
-from models.SpaTrackV2.models.blocks import bilinear_sampler
+from SpaTrackerV2.models.SpaTrackV2.models.blocks import bilinear_sampler
 
 def get_grid(height, width, shape=None, dtype="torch", device="cpu", align_corners=True, normalize=True):
     H, W = height, width

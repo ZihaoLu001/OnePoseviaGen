@@ -4,9 +4,9 @@ from tqdm import tqdm
 import utils3d
 from PIL import Image
 
-from trellis.renderers import MeshRenderer
-from trellis.representations import Octree, Gaussian, MeshExtractResult
-from trellis.utils.random_utils import sphere_hammersley_sequence
+from trellis.trellis.renderers import MeshRenderer
+from trellis.trellis.representations import Octree, Gaussian, MeshExtractResult
+from trellis.trellis.utils.random_utils import sphere_hammersley_sequence
 
 
 def yaw_pitch_r_fov_to_extrinsics_intrinsics(yaws, pitchs, rs, fovs, device='cuda'):

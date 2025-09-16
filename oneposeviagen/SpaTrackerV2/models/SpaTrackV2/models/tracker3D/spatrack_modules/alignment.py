@@ -9,7 +9,7 @@ import torch.nn.functional as F
 import torch.types
 import utils3d
 
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.geometry_torch import (
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.geometry_torch import (
     weighted_mean, 
     harmonic_mean, 
     geometric_mean,

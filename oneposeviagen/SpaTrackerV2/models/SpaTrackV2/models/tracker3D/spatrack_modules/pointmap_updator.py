@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from models.SpaTrackV2.models.blocks import bilinear_sampler
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.alignment import align_points_scale, align_points_scale_xyz_shift
+from SpaTrackerV2.models.SpaTrackV2.models.blocks import bilinear_sampler
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.alignment import align_points_scale, align_points_scale_xyz_shift
 
 def compute_affine_scale_and_shift(points, pointmap, mask, weights=None, eps=1e-6):
     """

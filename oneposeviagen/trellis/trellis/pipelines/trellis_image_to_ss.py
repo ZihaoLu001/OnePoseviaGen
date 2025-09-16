@@ -14,19 +14,19 @@ import pytorch_lightning as pl
 import random
 import open3d as o3d
 import utils3d
-from trellis.modules.sparse.attention import SparseMultiHeadAttention
-from trellis.models.structured_latent_flow import SparseResBlock3d
-import trellis.modules.sparse as sp
+from trellis.trellis.modules.sparse.attention import SparseMultiHeadAttention
+from trellis.trellis.models.structured_latent_flow import SparseResBlock3d
+import trellis.trellis.modules.sparse as sp
 from .trellis_image_to_3d import *
 from scipy.ndimage import binary_dilation
 from .base import Pipeline
 from . import samplers
 from ..modules import sparse as sp
-from trellis.models.sparse_structure_vae import *
+from trellis.trellis.models.sparse_structure_vae import *
 from ..modules.spatial import patchify, unpatchify
 from easydict import EasyDict as edict
-import trellis.models as models
-from trellis.modules.transformer import ModulatedPosedTransformerBlock
+import trellis.trellis.models as models
+from trellis.trellis.modules.transformer import ModulatedPosedTransformerBlock
 
 # import sys
 # sys.path.append("wheels/vggt")

@@ -3,16 +3,16 @@ import torch
 import torch.amp
 import torch.nn.functional as F
 import torch.nn as nn
-from models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
     EfficientUpdateFormer, AttnBlock, Attention, CrossAttnBlock,
     sequence_BCE_loss, sequence_loss, sequence_prob_loss, sequence_dyn_prob_loss
 )
 import math
-from models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
     Mlp, BasicEncoder, EfficientUpdateFormer, GeometryEncoder, NeighborTransformer
 )
 import numpy as np
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.simple_vit_1d import Transformer,posemb_sincos_1d
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.simple_vit_1d import Transformer,posemb_sincos_1d
 from einops import rearrange
 
 def self_grid_pos_embedding(B, T, H, W, level=None):

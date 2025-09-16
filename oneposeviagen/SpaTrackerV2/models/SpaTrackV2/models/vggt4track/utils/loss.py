@@ -3,7 +3,7 @@
 import torch
 import torch.nn as nn
 import utils3d
-from models.moge.train.losses import (
+from SpaTrackerV2.models.moge.train.losses import (
     affine_invariant_global_loss,
     affine_invariant_local_loss, 
     edge_loss,
@@ -13,9 +13,9 @@ from models.moge.train.losses import (
     monitoring, 
 )
 import torch.nn.functional as F
-from models.SpaTrackV2.models.utils import pose_enc2mat, matrix_to_quaternion, get_track_points, normalize_rgb
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.utils import depth_to_points_colmap, get_nth_visible_time_index
-from models.SpaTrackV2.models.vggt4track.utils.pose_enc import pose_encoding_to_extri_intri, extri_intri_to_pose_encoding
+from SpaTrackerV2.models.SpaTrackV2.models.utils import pose_enc2mat, matrix_to_quaternion, get_track_points, normalize_rgb
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.utils import depth_to_points_colmap, get_nth_visible_time_index
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.utils.pose_enc import pose_encoding_to_extri_intri, extri_intri_to_pose_encoding
 
 def compute_loss(predictions, annots):
     """

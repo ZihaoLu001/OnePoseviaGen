@@ -32,19 +32,19 @@ import logging
 from concurrent.futures import ThreadPoolExecutor
 import atexit
 import uuid
-from models.SpaTrackV2.models.vggt4track.models.vggt_moe import VGGT4Track
-from models.SpaTrackV2.models.vggt4track.utils.load_fn import preprocess_image
-from models.SpaTrackV2.models.predictor import Predictor
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.models.vggt_moe import VGGT4Track
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.utils.load_fn import preprocess_image
+from SpaTrackerV2.models.SpaTrackV2.models.predictor import Predictor
 
-from sam2.build_sam import build_sam2_video_predictor
-from amodal3r.pipelines import Amodal3RImageTo3DPipeline
-from amodal3r.utils import render_utils, postprocessing_utils
+from SAM2_in_video.sam2.build_sam import build_sam2_video_predictor
+from Amodal3R.amodal3r.pipelines import Amodal3RImageTo3DPipeline
+from Amodal3R.amodal3r.utils import render_utils, postprocessing_utils
 
-from trellis.pipelines import TrellisImageTo3DPipeline
-from trellis.utils import render_utils as render_utils_hi3dgen
-from trellis.utils import postprocessing_utils as postprocessing_utils_hi3dgen
+from trellis.trellis.pipelines import TrellisImageTo3DPipeline
+from trellis.trellis.utils import render_utils as render_utils_hi3dgen
+from trellis.trellis.utils import postprocessing_utils as postprocessing_utils_hi3dgen
 
-from fpose.recover_scale import recover_scale
+from fpose.fpose.recover_scale import recover_scale
 
 from oneposeviagen.scripts.estimate_poses import estimate_poses
 from oneposeviagen.scripts.render_normals import render_high_model_to_normal_video
@@ -55,8 +55,8 @@ logger = logging.getLogger(__name__)
 
 # Import custom modules with error handling
 try:
-    from app_3rd.sam_utils.inference import SamPredictor, get_sam_predictor, run_inference
-    from app_3rd.spatrack_utils.infer_track import get_tracker_predictor, run_tracker, get_points_on_a_grid
+    from SpaTrackerV2.app_3rd.sam_utils.inference import SamPredictor, get_sam_predictor, run_inference
+    from SpaTrackerV2.app_3rd.spatrack_utils.infer_track import get_tracker_predictor, run_tracker, get_points_on_a_grid
 except ImportError as e:
     logger.error(f"Failed to import custom modules: {e}")
     raise

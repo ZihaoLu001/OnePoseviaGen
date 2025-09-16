@@ -7,9 +7,9 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from models.SpaTrackV2.utils.model_utils  import sample_features5d, bilinear_sampler
+from SpaTrackerV2.models.SpaTrackV2.utils.model_utils  import sample_features5d, bilinear_sampler
 
-from models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.co_tracker.utils import (
     Mlp, BasicEncoder, EfficientUpdateFormer
 )
 

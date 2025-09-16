@@ -1,3 +1,4 @@
+from __future__ import annotations
 import gc
 
 import numpy as np
@@ -6,10 +7,11 @@ from segment_anything import SamPredictor, sam_model_registry
 
 # Try to import HF SAM support
 try:
-    from app_3rd.sam_utils.hf_sam_predictor import get_hf_sam_predictor, HFSamPredictor
+    from .hf_sam_predictor import get_hf_sam_predictor, HFSamPredictor
     HF_AVAILABLE = True
 except ImportError:
     HF_AVAILABLE = False
+    HFSamPredictor = None
 
 models = {
   'vit_b': 'app_3rd/sam_utils/checkpoints/sam_vit_b_01ec64.pth',

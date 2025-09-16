@@ -8,14 +8,14 @@ import torch
 import torch.nn as nn
 from huggingface_hub import PyTorchModelHubMixin  # used for model hub
 
-from models.SpaTrackV2.models.vggt4track.models.aggregator import Aggregator
-from models.SpaTrackV2.models.vggt4track.heads.camera_head import CameraHead
-from models.SpaTrackV2.models.vggt4track.heads.dpt_head import DPTHead
-from models.SpaTrackV2.models.vggt4track.heads.track_head import TrackHead
-from models.SpaTrackV2.models.vggt4track.utils.loss import compute_loss
-from models.SpaTrackV2.models.vggt4track.utils.pose_enc import pose_encoding_to_extri_intri
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.utils import depth_to_points_colmap, get_nth_visible_time_index
-from models.SpaTrackV2.models.vggt4track.utils.load_fn import preprocess_image
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.models.aggregator import Aggregator
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.heads.camera_head import CameraHead
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.heads.dpt_head import DPTHead
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.heads.track_head import TrackHead
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.utils.loss import compute_loss
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.utils.pose_enc import pose_encoding_to_extri_intri
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.utils import depth_to_points_colmap, get_nth_visible_time_index
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.utils.load_fn import preprocess_image
 from einops import rearrange
 import torch.nn.functional as F
 

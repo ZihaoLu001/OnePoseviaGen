@@ -16,16 +16,16 @@ import torch.nn.functional as F
 # from depth anything v2
 from huggingface_hub import PyTorchModelHubMixin  # used for model hub
 from einops import rearrange
-from models.monoD.depth_anything_v2.dpt import DepthAnythingV2
-from models.moge.model.v1 import MoGeModel
+from SpaTrackerV2.models.monoD.depth_anything_v2.dpt import DepthAnythingV2
+from SpaTrackerV2.models.moge.model.v1 import MoGeModel
 import copy 
 from functools import partial
-from models.SpaTrackV2.models.tracker3D.TrackRefiner import TrackRefiner3D
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.TrackRefiner import TrackRefiner3D
 import kornia
-from models.SpaTrackV2.utils.model_utils import sample_features5d
+from SpaTrackerV2.models.SpaTrackV2.utils.model_utils import sample_features5d
 import utils3d
-from models.SpaTrackV2.models.tracker3D.spatrack_modules.utils import depth_to_points_colmap, get_nth_visible_time_index
-from models.SpaTrackV2.models.utils import pose_enc2mat, matrix_to_quaternion, get_track_points, normalize_rgb
+from SpaTrackerV2.models.SpaTrackV2.models.tracker3D.spatrack_modules.utils import depth_to_points_colmap, get_nth_visible_time_index
+from SpaTrackerV2.models.SpaTrackV2.models.utils import pose_enc2mat, matrix_to_quaternion, get_track_points, normalize_rgb
 import random
 
 class SpaTrack2(nn.Module, PyTorchModelHubMixin):

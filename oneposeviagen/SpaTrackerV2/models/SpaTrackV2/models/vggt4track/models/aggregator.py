@@ -10,10 +10,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from typing import Optional, Tuple, Union, List, Dict, Any
 
-from models.SpaTrackV2.models.vggt4track.layers import PatchEmbed
-from models.SpaTrackV2.models.vggt4track.layers.block import Block
-from models.SpaTrackV2.models.vggt4track.layers.rope import RotaryPositionEmbedding2D, PositionGetter
-from models.SpaTrackV2.models.vggt4track.layers.vision_transformer import vit_small, vit_base, vit_large, vit_giant2
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.layers import PatchEmbed
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.layers.block import Block
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.layers.rope import RotaryPositionEmbedding2D, PositionGetter
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.layers.vision_transformer import vit_small, vit_base, vit_large, vit_giant2
 from torch.utils.checkpoint import checkpoint
 
 logger = logging.getLogger(__name__)

@@ -11,9 +11,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from models.SpaTrackV2.models.vggt4track.layers import Mlp
-from models.SpaTrackV2.models.vggt4track.layers.block import Block
-from models.SpaTrackV2.models.vggt4track.heads.head_act import activate_pose
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.layers import Mlp
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.layers.block import Block
+from SpaTrackerV2.models.SpaTrackV2.models.vggt4track.heads.head_act import activate_pose
 
 
 class CameraHead(nn.Module):

@@ -9,8 +9,8 @@ import imageio
 import cv2
 import logging
 from oneposeviagen.locate.fit_object_scale import get_scale
-from fpose.estimater import *
-from fpose.datareader import *
+from fpose.fpose.estimater import *
+from fpose.fpose.datareader import *
 
 def get_all_pose(test_scene_dir, mesh, topic, debug, track_refine_iter=8, est_refine_iter=5):
   set_logging_format()

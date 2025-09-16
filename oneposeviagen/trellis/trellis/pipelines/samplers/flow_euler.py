@@ -6,8 +6,8 @@ from easydict import EasyDict as edict
 from .base import Sampler
 from .classifier_free_guidance_mixin import ClassifierFreeGuidanceSamplerMixin
 from .guidance_interval_mixin import GuidanceIntervalSamplerMixin
-import trellis.modules.sparse as sp
-from trellis.modules.spatial import patchify, unpatchify
+import trellis.trellis.modules.sparse as sp
+from trellis.trellis.modules.spatial import patchify, unpatchify
 
 class FlowEulerSampler(Sampler):
     """

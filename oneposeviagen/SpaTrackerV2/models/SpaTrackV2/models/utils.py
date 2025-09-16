@@ -21,8 +21,8 @@ from easydict import EasyDict as edict
 from enum import Enum
 import torch.utils.data.distributed as dist
 from typing import Literal, Union, List, Tuple, Dict
-from models.monoD.depth_anything_v2.util.transform import Resize
-from models.SpaTrackV2.utils.model_utils import sample_features5d
+from SpaTrackerV2.models.monoD.depth_anything_v2.util.transform import Resize
+from SpaTrackerV2.models.SpaTrackV2.utils.model_utils import sample_features5d
 EPS = 1e-9
 
 class Summary(Enum):

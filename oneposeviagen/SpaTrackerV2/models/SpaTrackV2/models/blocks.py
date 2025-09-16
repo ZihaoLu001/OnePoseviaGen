@@ -14,7 +14,7 @@ from functools import partial
 from itertools import repeat
 import torchvision.models as tvm
 from torch.utils.checkpoint import checkpoint
-from models.monoD.depth_anything.dpt import DPTHeadEnc, DPTHead
+from SpaTrackerV2.models.monoD.depth_anything.dpt import DPTHeadEnc, DPTHead
 from typing import Union, Tuple
 from torch import Tensor
 
